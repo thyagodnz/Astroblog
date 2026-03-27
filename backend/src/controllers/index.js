@@ -18,6 +18,9 @@ import { addComment } from './News/addComment.js'
 import { deleteComment } from './News/deleteComment.js'
 import { getNewsByAuthor } from './News/getNewsByAuthor.js'
 
+import { createFeedback } from './Feedback/createFeedback.js'
+import { getFeedbacks } from './Feedback/getFeedbacks.js'
+
 export const UserController = {
     getUsers,
     createUser,
@@ -28,7 +31,7 @@ export const UserController = {
     getUserById,
     getMe,
     forgotPassword,
-    beCollaborator
+    beCollaborator,
 }
 
 export const NewsController = {
@@ -39,5 +42,10 @@ export const NewsController = {
     getNewsById,
     addComment,
     deleteComment,
-    getNewsByAuthor
+    getNewsByAuthor,
+}
+
+export const FeedbackController = {
+    createFeedback,
+    getFeedbacks,
 }
