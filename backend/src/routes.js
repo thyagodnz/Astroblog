@@ -2,12 +2,6 @@ import { Router } from 'express'
 import { UserController, NewsController } from './controllers/index.js'
 import upload from './middlewares/upload.js'
 import { auth } from './middlewares/auth.js'
-import express from 'express';
-import { createOrUpdateReview,
-  getPostReviews,
-  getMyReview,
-  updateReview,
-  deleteReview, } from './controllers/Review/reviewController.js';
 
 const routes = Router()
 
@@ -31,19 +25,5 @@ routes.delete('/news/:id', NewsController.deleteNews)
 
 routes.post('/news/:id/comments', auth, NewsController.addComment) //🔒
 routes.delete('/news/:newsId/comments/:commentId', auth, NewsController.deleteComment) //🔒
-
-routes.get('/posts/:postId/reviews', getPostReviews);
-
-// Ver meu review neste post (requer login)
-routes.get('/posts/:postId/reviews/me', auth, getMyReview);
-
-// Criar ou atualizar meu review (requer login)
-routes.post('/posts/:postId/reviews', auth, createOrUpdateReview);
-
-// Editar review por ID (requer login + ser dono)
-routes.put('/posts/:postId/reviews/:reviewId', auth, updateReview);
-
-// Deletar review por ID (requer login + ser dono)
-routes.delete('/posts/:postId/reviews/:reviewId', auth, deleteReview);
 
 export default routes

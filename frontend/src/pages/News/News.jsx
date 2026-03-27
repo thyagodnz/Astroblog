@@ -7,7 +7,6 @@ import { formatDistanceToNow, format, parseISO } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 import { BsPatchCheckFill } from 'react-icons/bs'
 import api from '../../services/api'
-import ReviewSection from '../../components/ReviewSection/ReviewSection.jsx'
 
 function News() {
     const { id } = useParams()
@@ -182,13 +181,6 @@ function News() {
                     <p className='no-comments'>Nenhum comentário ainda</p>
                 )}
             </div>
-
-            <ReviewSection
-                postId={id}
-                isLoggedIn={!!userData}
-                currentUserId={userData?.id || null}
-            />
-
         </div>
     )
 }
