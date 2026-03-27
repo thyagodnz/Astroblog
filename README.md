@@ -1,4 +1,4 @@
-# AstroBlog
+# Astroblog
 
 Este projeto é um sistema de Publicação de noticiais.
 ## Tecnologias Utilizadas
@@ -36,11 +36,11 @@ Crie um banco de dados MongoDB:
    ```
 3. Crie um arquivo `.env` no diretório `backend` e adicione as seguintes variáveis de ambiente:
    ```env
-    DATABASE_URL="mongodb+srv://thyago:iWEg6QpkipCC3rHh@cluster0.xain9id.mongodb.net/Cluster0? =true&w=majority&appName=Cluster0"
-    CLOUD_NAME="dpiificss"
-    API_KEY="633361246442217"
-    API_SECRET="jNzKUVJI0xJ8gJpwWwxWAP7acvY" 
-    JWT_SECRET="wfhwfh4t8r47t5jgsjfkjkLEFHF835RG"   
+    DATABASE_URL=""
+    CLOUD_NAME=""
+    API_KEY=""
+    API_SECRET="" 
+    JWT_SECRET=""   
      ```  
     
 ## Instruções para Execução
