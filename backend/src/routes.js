@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { UserController, NewsController } from './controllers/index.js'
+import { UserController, NewsController, FeedbackController } from './controllers/index.js'
 import upload from './middlewares/upload.js'
 import { auth } from './middlewares/auth.js'
 
@@ -25,5 +25,9 @@ routes.delete('/news/:id', NewsController.deleteNews)
 
 routes.post('/news/:id/comments', auth, NewsController.addComment) //🔒
 routes.delete('/news/:newsId/comments/:commentId', auth, NewsController.deleteComment) //🔒
+
+// feedback
+routes.post('/feedbacks', auth, FeedbackController.createFeedback)
+routes.get('/feedbacks', auth, FeedbackController.getFeedbacks)
 
 export default routes
